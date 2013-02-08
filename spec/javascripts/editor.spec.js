@@ -19,6 +19,11 @@ describe("a SirTrevor.Editor instance", function(){
     
   });
   
+  afterEach(function (){
+    delete editor;
+    editor_with_options = null;
+  });
+  
   it("should fail if no element is passed", function() {
     expect(editor.$el).toBe(undefined);
     expect(editor.el).toBe(undefined);
